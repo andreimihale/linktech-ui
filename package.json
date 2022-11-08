@@ -1,0 +1,68 @@
+{
+  "name": "@linktech/ui",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Linktech official UI Library",
+  "main": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "preversion": "npm run build",
+    "postversion": "git push --follow-tags",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreimihale/linktech-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreimihale/linktech-ui/issues"
+  },
+  "homepage": "https://github.com/andreimihale/linktech-ui#readme",
+  "dependencies": {
+    "@types/jest": "^29.2.2",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack5": "^6.5.13",
+    "@storybook/manager-webpack5": "^6.5.13",
+    "@storybook/node-logger": "^6.5.13",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "0.0.13",
+    "@types/tapable": "^2.2.2",
+    "babel-plugin-named-exports-order": "0.0.2",
+    "prop-types": "^15.8.1",
+    "webpack": "^5.74.0"
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  }
+}
