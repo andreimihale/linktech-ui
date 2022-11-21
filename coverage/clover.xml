@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1669065791624" clover="3.2.0">
+  <project timestamp="1669065791624" name="All files">
+    <metrics statements="18" coveredstatements="18" conditionals="28" coveredconditionals="14" methods="11" coveredmethods="11" elements="57" coveredelements="43" complexity="0" loc="18" ncloc="18" packages="2" files="4" classes="4"/>
+    <package name="Button">
+      <metrics statements="9" coveredstatements="9" conditionals="16" coveredconditionals="8" methods="7" coveredmethods="7"/>
+      <file name="Button.styled.ts" path="/Users/andreimihale/Documents/GitHubCLI/linktech-ui/src/components/Inputs/Button/Button.styled.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="16" coveredconditionals="8" methods="6" coveredmethods="6"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="1" type="cond" truecount="1" falsecount="1"/>
+      </file>
+      <file name="Button.tsx" path="/Users/andreimihale/Documents/GitHubCLI/linktech-ui/src/components/Inputs/Button/Button.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="TextField">
+      <metrics statements="9" coveredstatements="9" conditionals="12" coveredconditionals="6" methods="4" coveredmethods="4"/>
+      <file name="TextField.styled.ts" path="/Users/andreimihale/Documents/GitHubCLI/linktech-ui/src/components/Inputs/TextField/TextField.styled.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="12" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="10" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="38" count="4" type="cond" truecount="2" falsecount="2"/>
+      </file>
+      <file name="TextField.tsx" path="/Users/andreimihale/Documents/GitHubCLI/linktech-ui/src/components/Inputs/TextField/TextField.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
