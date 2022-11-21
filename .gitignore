@@ -42,3 +42,5 @@ dist/**/*
 yarn.lock
 
 **.log.**
+
+src/stories

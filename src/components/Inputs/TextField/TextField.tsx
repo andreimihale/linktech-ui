@@ -1,5 +1,4 @@
 import React, { FC, Fragment } from 'react';
-import styled from 'styled-components';
 import { TextFieldProps } from './TextField.types';
 import {
   StyledLabel,
