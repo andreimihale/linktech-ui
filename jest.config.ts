@@ -20,10 +20,20 @@ export default {
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: undefined,
+  collectCoverageFrom: [
+    './src/**',
+    '!./src/index.ts',
+    '!./src/**/**/**/*.stories.tsx',
+    '!./src/**/**/**/*.styled.ts',
+    '!./src/**/**/**/*.types.ts',
+    '!./src/**/**/**/index.ts',
+    '!./src/**/index.ts',
+    '!./src/**/**/index.ts',
+    '!./src/stories/**',
+  ],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "coverage",
+  coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -42,7 +52,14 @@ export default {
   // ],
 
   // An object that configures minimum threshold enforcement for coverage results
-  // coverageThreshold: undefined,
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80,
+    },
+  },
 
   // A path to a custom dependency extractor
   // dependencyExtractor: undefined,
@@ -144,7 +161,7 @@ export default {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -167,7 +184,7 @@ export default {
   // testRegex: [],
 
   // This option allows the use of a custom results processor
-  // testResultsProcessor: undefined,
+  testResultsProcessor: 'jest-sonar-reporter',
 
   // This option allows use of a custom test runner
   // testRunner: "jest-circus/runner",

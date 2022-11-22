@@ -44,3 +44,5 @@ yarn.lock
 **.log.**
 
 src/stories
+
+test-report.xml
