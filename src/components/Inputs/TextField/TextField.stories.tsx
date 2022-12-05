@@ -1,5 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
+
 import TextField from './TextField';
 import { TextFieldProps } from './TextField.types';
 
@@ -31,6 +32,7 @@ Error.args = {
   error: true,
   disabled: false,
   message: 'Error',
+  label: 'Error',
 };
 
 export const Disabled = Template.bind({});

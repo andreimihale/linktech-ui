@@ -8,32 +8,42 @@ export const StyledInput = styled.input<TextFieldProps>`
   border: solid 2px
     ${(props) =>
       props.disabled
-        ? '#e4e3ea'
+        ? props.theme.colors.primarySolidContrast
         : props.error
-        ? '#a9150b'
+        ? props.theme.colors.danger
         : props.success
-        ? '#067d68'
-        : '#353637'};
-  background-color: #fff;
+        ? props.theme.colors.success
+        : props.theme.colors.info};
+  background-color: ${(props) => props.theme.colors.white};
   &:focus {
-    border: solid 2px #1b116e;
+    border: ${(props) =>
+      `solid ${props.theme.borderWeights.normal} ${props.theme.colors.border}`};
   }
 `;
 
 export const StyledLabel = styled.div<TextFieldProps>`
   font-size: 14px;
-  color: ${(props) => (props.disabled ? '#e4e3ea' : '#080808')};
+  color: ${(props) =>
+    props.disabled
+      ? props.theme.colors.primarySolidContrast
+      : props.theme.colors.black};
   padding-bottom: 6px;
 `;
 
 export const StyledMessage = styled.div<TextFieldProps>`
   font-size: 14px;
-  color: #a9150b8;
+  color: ${(props) => props.theme.colors.text};
   padding-top: 4px;
 `;
 
 export const StyledText = styled.p<TextFieldProps>`
   margin: 0px;
   color: ${(props) =>
-    props.disabled ? '#e4e3ea' : props.error ? '#a9150b' : '#080808'};
+    props.disabled
+      ? props.theme.colors.primarySolidContrast
+      : props.error
+      ? props.theme.colors.danger
+      : props.success
+      ? props.theme.colors.success
+      : props.theme.colors.info};
 `;

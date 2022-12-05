@@ -1,4 +1,4 @@
-import React, { FC, Fragment } from 'react';
+import React, { FC } from 'react';
 import { TextFieldProps } from './TextField.types';
 import {
   StyledLabel,
@@ -6,26 +6,37 @@ import {
   StyledInput,
   StyledMessage,
 } from './TextField.styled';
+import { useTheme } from 'styled-components';
+import { LightTheme } from '../../Utils/Theme/Theme';
 
 const Input: FC<TextFieldProps> = ({
-  id,
-  disabled,
-  label,
+  id = '1',
+  disabled = false,
+  label = 'Label',
   message,
-  error,
-  success,
-  onChange,
-  placeholder,
+  error = false,
+  success = false,
+  onChange = () => null,
+  placeholder = 'Placeholder',
   ...props
 }) => {
+  const currentTheme = useTheme();
+  const defaultTheme = LightTheme;
+
   return (
-    <Fragment>
-      <StyledLabel>
-        <StyledText disabled={disabled} error={error}>
+    <>
+      <StyledLabel theme={currentTheme || defaultTheme}>
+        <StyledText
+          disabled={disabled}
+          error={error}
+          success={success}
+          theme={currentTheme || defaultTheme}
+        >
           {label}
         </StyledText>
       </StyledLabel>
       <StyledInput
+        theme={currentTheme || defaultTheme}
         id={id}
         type="text"
         onChange={onChange}
@@ -35,10 +46,12 @@ const Input: FC<TextFieldProps> = ({
         placeholder={placeholder}
         {...props}
       ></StyledInput>
-      <StyledMessage>
-        <StyledText error={error}>{message}</StyledText>
+      <StyledMessage theme={currentTheme || defaultTheme}>
+        <StyledText error={error} theme={currentTheme || defaultTheme}>
+          {message}
+        </StyledText>
       </StyledMessage>
-    </Fragment>
+    </>
   );
 };
 
