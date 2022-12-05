@@ -25,4 +25,13 @@ describe('Running Test for Marbella TextField', () => {
 
     expect(Input.value).toBe('Hello world!');
   });
+
+  test('Check if default palceholder is rendered', () => {
+    render(<TextField />);
+
+    expect(screen.getByPlaceholderText('Placeholder')).toHaveAttribute(
+      'placeholder',
+      'Placeholder'
+    );
+  });
 });

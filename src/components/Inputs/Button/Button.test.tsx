@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import Button from './Button';
 
-describe('Running Test for Marbella Button', () => {
+describe('Running Test for Button', () => {
   test('Render default button', () => {
     render(<Button></Button>);
     expect(screen.getByText('My Button')).toBeInTheDocument();
