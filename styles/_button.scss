@@ -1,0 +1,7 @@
+.btn-link {
+  @apply flex py-1.5 px-4 md:px-5 rounded-md text-sm md:text-base font-semibold border-2 transition-all duration-500 ease-in-out text-white border-white;
+
+  &:hover {
+    @apply bg-white text-black;
+  }
+}
