@@ -7,52 +7,37 @@ import { ButtonProps } from './Button.types';
 export default {
   title: 'Inputs/Button',
   component: Button,
-  argTypes: {},
+  argTypes: {
+    handleClick: {
+      action: 'clicked',
+    },
+  },
 } as Meta<typeof Button>;
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  disabled: false,
-  text: 'Primary',
+export const Default = Template.bind({});
+Default.args = {
+  text: 'Default',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  primary: false,
-  disabled: false,
-  text: 'Secondary',
+export const PrimaryContained = Template.bind({});
+PrimaryContained.args = {
+  text: 'Primary Contained',
+  color: 'primary',
+  variant: 'contained',
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  primary: false,
-  disabled: true,
-  text: 'Disabled',
+export const PrimaryText = Template.bind({});
+PrimaryText.args = {
+  text: 'Primary Text',
+  color: 'primary',
+  variant: 'text',
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  primary: true,
-  disabled: false,
-  size: 'small',
-  text: 'Small',
-};
-
-export const Medium = Template.bind({});
-Medium.args = {
-  primary: true,
-  disabled: false,
-  size: 'medium',
-  text: 'Medium',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  primary: true,
-  disabled: false,
-  size: 'large',
-  text: 'Large',
+export const PrimaryOutlined = Template.bind({});
+PrimaryOutlined.args = {
+  text: 'Primary Outlined',
+  color: 'primary',
+  variant: 'outlined',
 };

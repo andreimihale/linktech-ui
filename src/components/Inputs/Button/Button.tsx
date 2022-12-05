@@ -1,6 +1,12 @@
 import React, { FC } from 'react';
 import { ButtonProps } from './Button.types';
-import { StyledButton } from './Button.styled';
+import {
+  StyledContainedButton,
+  StyledOutlinedButton,
+  StyledTextButton,
+} from './Button.styled';
+import { useTheme } from 'styled-components';
+import { LightTheme } from '../../Utils/Theme/Theme';
 
 /**
  * Button component
@@ -12,24 +18,114 @@ import { StyledButton } from './Button.styled';
  */
 
 const Button: FC<ButtonProps> = ({
-  size,
-  primary,
+  children = 'My Button',
+  classes,
+  color = 'primary',
   disabled,
-  text,
-  onClick,
+  href,
+  size = 'large',
+  variant = 'contained',
+  onClick = () => null,
   ...props
 }) => {
+  const currentTheme = useTheme();
+  const defaultTheme = LightTheme;
+
   return (
-    <StyledButton
-      type="button"
-      onClick={onClick}
-      primary={primary}
-      disabled={disabled}
-      size={size}
-      {...props}
-    >
-      {text}
-    </StyledButton>
+    <>
+      {href && variant === 'text' && (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          <StyledTextButton
+            type="button"
+            className={classes}
+            disabled={disabled}
+            size={size}
+            color={color}
+            theme={currentTheme || defaultTheme}
+            onClick={onClick}
+            {...props}
+          >
+            {children}
+          </StyledTextButton>
+        </a>
+      )}
+
+      {href && variant === 'outlined' && (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          <StyledOutlinedButton
+            type="button"
+            className={classes}
+            disabled={disabled}
+            size={size}
+            color={color}
+            theme={currentTheme || defaultTheme}
+            onClick={onClick}
+            {...props}
+          >
+            {children}
+          </StyledOutlinedButton>
+        </a>
+      )}
+
+      {href && variant === 'contained' && (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          <StyledContainedButton
+            type="button"
+            className={classes}
+            disabled={disabled}
+            size={size}
+            color={color}
+            theme={currentTheme || defaultTheme}
+            {...props}
+            onClick={onClick}
+          >
+            {children}
+          </StyledContainedButton>
+        </a>
+      )}
+      {!href && variant === 'text' && (
+        <StyledTextButton
+          type="button"
+          className={classes}
+          disabled={disabled}
+          size={size}
+          color={color}
+          theme={currentTheme || defaultTheme}
+          onClick={onClick}
+          {...props}
+        >
+          {children}
+        </StyledTextButton>
+      )}
+      {!href && variant === 'outlined' && (
+        <StyledOutlinedButton
+          type="button"
+          className={classes}
+          disabled={disabled}
+          size={size}
+          color={color}
+          theme={currentTheme || defaultTheme}
+          onClick={onClick}
+          {...props}
+        >
+          {children}
+        </StyledOutlinedButton>
+      )}
+      {!href && variant === 'contained' && (
+        <StyledContainedButton
+          type="button"
+          className={classes}
+          disabled={disabled}
+          size={size}
+          color={color}
+          theme={currentTheme || defaultTheme}
+          onClick={onClick}
+          {...props}
+        >
+          {children}
+        </StyledContainedButton>
+      )}
+    </>
   );
 };
 

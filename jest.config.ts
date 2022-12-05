@@ -26,6 +26,7 @@ export default {
     '!./src/**/**/**/*.stories.tsx',
     '!./src/**/**/**/*.styled.ts',
     '!./src/**/**/**/*.types.ts',
+    '!./src/**/**/**/*.scss',
     '!./src/**/**/**/index.ts',
     '!./src/**/index.ts',
     '!./src/**/**/index.ts',
