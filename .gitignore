@@ -43,3 +43,7 @@ yarn.lock
 src/stories
 
 test-report.xml
+
+.next
+
+dist
