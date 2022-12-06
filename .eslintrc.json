@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "import/no-anonymous-default-export": "off",
+    "no-anonymous-default-export": "off",
+    "semi": "off",
+    "no-console": "error",
+    "no-inline-comments": "error"
+  }
 }

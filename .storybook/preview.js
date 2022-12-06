@@ -1,3 +1,5 @@
+import { addDecorator } from '@storybook/react';
+import { ThemeProvider } from 'next-themes';
 import * as NextImage from 'next/image';
 import '../styles/globals.scss';
 
@@ -10,6 +12,12 @@ export const parameters = {
     },
   },
 };
+
+addDecorator((story) => (
+  <ThemeProvider enableSystem={false} attribute="class">
+    {story()}
+  </ThemeProvider>
+));
 
 const OriginalNextImage = NextImage.default;
 

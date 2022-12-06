@@ -1,0 +1,5 @@
+node_modules
+.next
+.storybook
+coverage
+src/stories
