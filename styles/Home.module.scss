@@ -57,7 +57,7 @@
 }
 
 .code {
-  color: #fafafa;
+  @apply text-white bg-black dark:text-black dark:bg-white;
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;

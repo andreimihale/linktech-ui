@@ -3,7 +3,7 @@ import '../styles/globals.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider enableSystem={false} attribute="class">
+    <ThemeProvider enableSystem={false} defaultTheme="light" attribute="class">
       <Component {...pageProps} />
     </ThemeProvider>
   );

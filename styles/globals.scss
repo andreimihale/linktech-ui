@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @import '../components/Inputs/Button/button.scss';
-
+@import '../components/Navigation/NavigationLink/navigationLink.scss';
+@import './Home.module.scss';
 /*
   1. Use a more-intuitive box-sizing model.
 */

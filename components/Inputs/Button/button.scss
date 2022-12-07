@@ -1,7 +1,210 @@
-.btn-link {
-  @apply flex py-1.5 px-4 md:px-5 rounded-md text-sm md:text-base font-semibold border-2 transition-all duration-500 ease-in-out text-white dark:text-black bg-black dark:bg-white border-black dark:border-white;
+.btn {
+  @apply overflow-hidden relative flex flex-row gap-x-2 justify-between items-center flex-nowrap rounded-lg text-sm md:text-base lg:text-lg font-bold transition-all duration-500 ease-in-out;
 
-  &:hover {
-    @apply text-black dark:text-white bg-transparent border-black dark:border-white;
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 1000ms linear;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+
+  &-icon-start {
+    @apply w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6;
+  }
+
+  &-icon-end {
+    @apply w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6;
+  }
+
+  &.btn-contained {
+    &.btn-primary {
+      @apply bg-blue-600 text-white;
+
+      &:hover {
+        @apply bg-blue-800;
+      }
+    }
+
+    &.btn-secondary {
+      @apply bg-orange-500 text-white;
+
+      &:hover {
+        @apply bg-orange-700;
+      }
+    }
+
+    &.btn-success {
+      @apply bg-green-600 text-white;
+
+      &:hover {
+        @apply bg-green-800;
+      }
+    }
+
+    &.btn-info {
+      @apply bg-blue-500 text-white;
+
+      &:hover {
+        @apply bg-blue-700;
+      }
+    }
+
+    &.btn-warning {
+      @apply bg-yellow-400 text-slate-700;
+
+      &:hover {
+        @apply bg-yellow-700;
+      }
+    }
+
+    &.btn-danger {
+      @apply bg-red-600 text-white;
+
+      &:hover {
+        @apply bg-red-800;
+      }
+    }
+
+    &.btn-disabled-contained {
+      @apply bg-gray-300 text-gray-500 cursor-not-allowed;
+      &:hover {
+        @apply bg-gray-300 text-gray-500;
+      }
+    }
+  }
+
+  &.btn-outlined {
+    @apply border-2;
+
+    &.btn-primary {
+      @apply border-blue-600 text-blue-600;
+
+      &:hover {
+        @apply bg-blue-300 bg-opacity-30 border-blue-500 text-blue-500;
+      }
+    }
+
+    &.btn-secondary {
+      @apply border-orange-500 text-orange-500;
+
+      &:hover {
+        @apply bg-orange-200 bg-opacity-30 border-orange-400 text-orange-400;
+      }
+    }
+
+    &.btn-success {
+      @apply border-green-600 text-green-600;
+
+      &:hover {
+        @apply bg-green-300 bg-opacity-30 border-green-500 text-green-500;
+      }
+    }
+
+    &.btn-info {
+      @apply border-blue-500 text-blue-500;
+
+      &:hover {
+        @apply bg-blue-200 bg-opacity-30 border-blue-400 text-blue-400;
+      }
+    }
+
+    &.btn-warning {
+      @apply border-yellow-400 text-yellow-400;
+
+      &:hover {
+        @apply bg-yellow-100 bg-opacity-30 border-yellow-300 text-yellow-300;
+      }
+    }
+
+    &.btn-danger {
+      @apply border-red-600 text-red-600;
+
+      &:hover {
+        @apply bg-red-300 bg-opacity-30 border-red-500 text-red-500;
+      }
+    }
+
+    &.btn-disabled-outlined {
+      @apply border-gray-300 text-gray-500 cursor-not-allowed;
+      &:hover {
+        @apply border-gray-300 text-gray-500 bg-transparent;
+      }
+    }
+  }
+
+  &.btn-text {
+    &.btn-primary {
+      @apply text-blue-600;
+
+      &:hover {
+        @apply bg-blue-300 bg-opacity-30;
+      }
+    }
+
+    &.btn-secondary {
+      @apply text-orange-500;
+
+      &:hover {
+        @apply bg-orange-200 bg-opacity-30;
+      }
+    }
+
+    &.btn-success {
+      @apply text-green-600;
+
+      &:hover {
+        @apply bg-green-300 bg-opacity-30;
+      }
+    }
+
+    &.btn-info {
+      @apply text-blue-500;
+
+      &:hover {
+        @apply bg-blue-200 bg-opacity-30;
+      }
+    }
+
+    &.btn-warning {
+      @apply text-yellow-400;
+
+      &:hover {
+        @apply bg-yellow-100 bg-opacity-30;
+      }
+    }
+
+    &.btn-danger {
+      @apply text-red-600;
+
+      &:hover {
+        @apply bg-red-300 bg-opacity-30;
+      }
+    }
+
+    &.btn-disabled-text {
+      @apply text-gray-500 cursor-not-allowed;
+      &:hover {
+        @apply text-gray-500 bg-transparent;
+      }
+    }
+  }
+
+  &.btn-small {
+    @apply py-1.5 px-2 md:py-1.5 md:px-3 lg:py-2 lg:px-6;
+  }
+
+  &.btn-medium {
+    @apply py-2 px-3 md:py-2 md:px-3 lg:py-3 lg:px-6;
+  }
+
+  &.btn-large {
+    @apply py-2 px-4 md:py-3 md:px-6 lg:py-3.5 lg:px-9;
   }
 }
