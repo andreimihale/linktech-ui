@@ -1,5 +1,5 @@
 import Button from './Button';
-import DarkModeSwitcher from '../../Theme/DarkModeSwitcher';
+
 export default {
   title: 'Components/Inputs/Button',
   component: Button,

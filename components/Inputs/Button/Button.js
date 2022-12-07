@@ -22,15 +22,24 @@ const Button = ({
 
   function rippleEffect(event) {
     const btn = event.currentTarget;
-    const circle = document.getElementById(id);
-    const diameter = Math.max(btn.clientWidth, btn.clientHeight);
 
+    const circle = document.getElementById(id);
+
+    const diameter = Math.max(btn.clientWidth, btn.clientHeight);
     const radius = diameter / 2;
 
     circle.style.width = circle.style.height = `${diameter}px`;
-    circle.style.left = `${event.clientX - (btn.offsetLeft + radius)}px`;
-    circle.style.top = `${event.clientY - (btn.offsetTop + radius)}px`;
-    circle.classList.add('ripple');
+    circle.style.left = `${
+      document.documentElement.scrollLeft +
+      event.clientX -
+      (btn.offsetLeft + radius)
+    }px`;
+
+    circle.style.top = `${
+      document.documentElement.scrollTop +
+      event.clientY -
+      (btn.offsetTop + radius)
+    }px`;
 
     const ripple = btn.getElementsByClassName('ripple')[0];
 

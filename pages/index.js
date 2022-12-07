@@ -1,12 +1,15 @@
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import { useState } from 'react';
 import Button from '../components/Inputs/Button';
 import Link from '../components/Navigation/Link';
 import NavigationLink from '../components/Navigation/NavigationLink';
 import DarkModeSwitcher from '../components/Theme/DarkModeSwitcher';
+import ClickAwayListener from '../components/Utils/ClickAwaiyListener';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
+  const [open, setOpen] = useState(true);
   return (
     <div className={styles.container}>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
@@ -31,10 +34,7 @@ export default function Home() {
         <br />
         <Button disabled={true} variant="text" />
 
-        <h1 className={styles.title}>
-          Welcome to <a href="https://https://nextjs.org">Next.js!</a>
-        </h1>
-        <Button size="medium" />
+        <Button size="small" />
         <br />
         <Button size="medium" variant="outlined" />
         <br />
@@ -63,6 +63,23 @@ export default function Home() {
         <br />
         <br />
         <Link href="https://www.google.com" target="_blank" />
+        <ClickAwayListener
+          onClickAway={() => setOpen(false)}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Button onClick={() => setOpen((prevState) => !prevState)}>
+            Toggle
+          </Button>
+          {open && <div>This is inside the clickAway</div>}
+        </ClickAwayListener>
+        <h1 className={styles.title}>
+          Welcome to <a href="https://https://nextjs.org">Next.js!</a>
+        </h1>
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
