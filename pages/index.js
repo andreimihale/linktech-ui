@@ -1,6 +1,7 @@
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Button from '../components/Inputs/Button';
+import Link from '../components/Navigation/Link';
 import NavigationLink from '../components/Navigation/NavigationLink';
 import DarkModeSwitcher from '../components/Theme/DarkModeSwitcher';
 import styles from '../styles/Home.module.scss';
@@ -58,6 +59,10 @@ export default function Home() {
         <NavigationLink href="/asd" color="danger">
           Test link
         </NavigationLink>
+        <br />
+        <br />
+        <br />
+        <Link href="https://www.google.com" target="_blank" />
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>

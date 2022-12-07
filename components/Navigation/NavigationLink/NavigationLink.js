@@ -36,7 +36,7 @@ const NavigationLink = ({
   );
 
   return (
-    <Link href={href} className={linkClassName} passHref {...props}>
+    <Link href={href} className={linkClassName} {...props}>
       {startIcon && (
         <span className="navigation-link-icon-start">{startIcon}</span>
       )}
