@@ -1,11 +1,11 @@
 .modal {
-  @apply backdrop-brightness-50 dark:backdrop-brightness-50;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+  @apply flex justify-center items-center fixed top-0 h-screen w-screen backdrop-brightness-50 dark:backdrop-brightness-50;
+
+  &.modal-row {
+    @apply flex-row;
+  }
+
+  &.modal-column {
+    @apply flex-col;
+  }
 }

@@ -7,7 +7,7 @@ import Link from '../components/Navigation/Link';
 import NavigationLink from '../components/Navigation/NavigationLink';
 import DarkModeSwitcher from '../components/Theme/DarkModeSwitcher';
 import Backdrop from '../components/Utils/Backdrop';
-import ClickAwayListener from '../components/Utils/ClickAwaiyListener';
+import ClickAwayListener from '../components/Utils/ClickAwayListener';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
