@@ -17,7 +17,7 @@ const ClickAwayListener = ({ onClickAway, children, ...props }) => {
     return () => {
       window.removeEventListener('click', handleClickAway);
     };
-  }, [rootRef]);
+  }, [onClickAway, rootRef]);
 
   return (
     <div ref={rootRef} {...props}>

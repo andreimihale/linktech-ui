@@ -22,7 +22,6 @@ const customJestConfig = {
     '!./components/index.js',
     '!./components/**/index.js',
     '!./components/**/*.stories.js',
-    '!./components/Theme/DarkModeSwitcher/**',
   ],
   coverageDirectory: 'coverage',
   coverageThreshold: {

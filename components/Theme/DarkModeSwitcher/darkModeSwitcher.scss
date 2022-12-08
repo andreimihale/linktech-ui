@@ -1,0 +1,7 @@
+.icon-dark {
+  @apply hidden  dark:block;
+}
+
+.icon-light {
+  @apply block dark:hidden;
+}
