@@ -21,7 +21,7 @@ const Template = (args) => {
   return (
     <>
       <Button onClick={handleToggle}>Show backdrop</Button>
-      <Backdrop open={open} onClick={handleClose}>
+      <Backdrop open={open} onClick={handleClose} {...args}>
         This is the children of the backdrop
       </Backdrop>
     </>
