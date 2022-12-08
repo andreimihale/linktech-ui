@@ -2,6 +2,7 @@ import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import { useState } from 'react';
 import Button from '../components/Inputs/Button';
+import ButtonGroup from '../components/Inputs/ButtonGroup/ButtonGroup';
 import Link from '../components/Navigation/Link';
 import NavigationLink from '../components/Navigation/NavigationLink';
 import DarkModeSwitcher from '../components/Theme/DarkModeSwitcher';
@@ -77,6 +78,8 @@ export default function Home() {
           </Button>
           {open && <div>This is inside the clickAway</div>}
         </ClickAwayListener>
+
+        <ButtonGroup />
         <h1 className={styles.title}>
           Welcome to <a href="https://https://nextjs.org">Next.js!</a>
         </h1>

@@ -5,7 +5,6 @@ export default {
   title: 'Components/Navigation/NavigationLink',
   component: NavigationLink,
   argTypes: {
-    isActive: { control: 'boolean', defaultValue: false },
     className: { control: 'text' },
     activeClassName: { control: 'text' },
     children: { control: 'text', defaultValue: 'My Link' },

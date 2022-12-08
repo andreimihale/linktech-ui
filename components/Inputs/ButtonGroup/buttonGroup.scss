@@ -1,0 +1,163 @@
+.btn-group {
+  @apply flex;
+
+  &.btn-group-row {
+    @apply flex-row;
+  }
+
+  &.btn-group-column {
+    @apply flex-col;
+  }
+
+  &.btn-group-contained {
+    @apply divide-x-2;
+
+    &.btn-group-primary {
+      @apply divide-blue-400;
+    }
+
+    &.btn-group-secondary {
+      @apply divide-orange-400;
+    }
+
+    &.btn-group-success {
+      @apply divide-green-400;
+    }
+
+    &.btn-group-info {
+      @apply divide-blue-400;
+    }
+
+    &.btn-group-warning {
+      @apply divide-yellow-200;
+    }
+
+    &.btn-group-danger {
+      @apply divide-red-400;
+    }
+  }
+
+  &.btn-group-outlined {
+    &.btn-group-primary {
+      .btn {
+        &.btn-outlined {
+          &:not(:first-child) {
+            @apply border-l-0;
+          }
+
+          &:not(:last-child) {
+            @apply border-r-blue-400;
+          }
+        }
+      }
+    }
+
+    &.btn-group-secondary {
+      .btn {
+        &.btn-outlined {
+          &:not(:first-child) {
+            @apply border-l-0;
+          }
+
+          &:not(:last-child) {
+            @apply border-r-orange-400;
+          }
+        }
+      }
+    }
+
+    &.btn-group-success {
+      .btn {
+        &.btn-outlined {
+          &:not(:first-child) {
+            @apply border-l-0;
+          }
+
+          &:not(:last-child) {
+            @apply border-r-green-400;
+          }
+        }
+      }
+    }
+
+    &.btn-group-info {
+      .btn {
+        &.btn-outlined {
+          &:not(:first-child) {
+            @apply border-l-0;
+          }
+
+          &:not(:last-child) {
+            @apply border-r-blue-400;
+          }
+        }
+      }
+    }
+
+    &.btn-group-warning {
+      .btn {
+        &.btn-outlined {
+          &:not(:first-child) {
+            @apply border-l-0;
+          }
+
+          &:not(:last-child) {
+            @apply border-r-yellow-200;
+          }
+        }
+      }
+    }
+
+    &.btn-group-danger {
+      .btn {
+        &.btn-outlined {
+          &:not(:first-child) {
+            @apply border-l-0;
+          }
+
+          &:not(:last-child) {
+            @apply border-r-red-400;
+          }
+        }
+      }
+    }
+  }
+
+  &.btn-group-text {
+    @apply divide-x-2;
+
+    &.btn-group-primary {
+      @apply divide-blue-400;
+    }
+
+    &.btn-group-secondary {
+      @apply divide-orange-400;
+    }
+
+    &.btn-group-success {
+      @apply divide-green-400;
+    }
+
+    &.btn-group-info {
+      @apply divide-blue-400;
+    }
+
+    &.btn-group-warning {
+      @apply divide-yellow-200;
+    }
+
+    &.btn-group-danger {
+      @apply divide-red-400;
+    }
+  }
+
+  .btn {
+    @apply rounded-none;
+    &:first-child {
+      @apply rounded-l-lg;
+    }
+    &:last-child {
+      @apply rounded-r-lg;
+    }
+  }
+}

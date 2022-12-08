@@ -52,19 +52,10 @@ const Button = ({
 
   const buttonClasses = classNames(
     'btn',
-    { 'btn-contained': variant === 'contained' },
-    { 'btn-outlined': variant === 'outlined' },
-    { 'btn-text': variant === 'text' },
+    { [`btn-${variant}`]: variant },
     { [`btn-disabled-${variant}`]: disabled },
-    { 'btn-small': size === 'small' },
-    { 'btn-medium': size === 'medium' },
-    { 'btn-large': size === 'large' },
-    { 'btn-primary': color === 'primary' },
-    { 'btn-secondary': color === 'secondary' },
-    { 'btn-success': color === 'success' },
-    { 'btn-info': color === 'info' },
-    { 'btn-warning': color === 'warning' },
-    { 'btn-danger': color === 'danger' },
+    { [`btn-${size}`]: size },
+    { [`btn-${color}`]: color },
     className
   );
 
