@@ -5,7 +5,7 @@ export default {
   component: DarkModeSwitcher,
 };
 
-const Template = (args) => <DarkModeSwitcher />;
+const Template = (args) => <DarkModeSwitcher {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

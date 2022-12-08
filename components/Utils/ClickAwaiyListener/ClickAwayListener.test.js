@@ -19,7 +19,7 @@ describe('components/Utils/ClickAwayListener', () => {
         <ClickAwayListener onClickAway={onClickAway} />
       </>
     );
-    fireEvent.click(container.firstChild);
+    fireEvent.mouseDown(container.firstChild);
     expect(onClickAway).toHaveBeenCalled();
   });
 
@@ -30,13 +30,12 @@ describe('components/Utils/ClickAwayListener', () => {
         <div></div>
       </ClickAwayListener>
     );
-    fireEvent.click(container.firstChild);
+    fireEvent.mouseDown(container.firstChild);
     expect(onClickAway).not.toHaveBeenCalled();
   });
 
   it('should call when useRef is null', () => {
     const onClickAway = jest.fn();
-    const useRefSpy = jest.spyOn(React, 'useRef').mockReturnValue(null);
 
     const { container } = render(
       <ClickAwayListener onClickAway={onClickAway}>
@@ -44,6 +43,6 @@ describe('components/Utils/ClickAwayListener', () => {
       </ClickAwayListener>
     );
 
-    fireEvent.click(container.firstChild);
+    fireEvent.mouseDown(container.firstChild);
   });
 });

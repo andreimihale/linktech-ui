@@ -6,11 +6,22 @@ import ButtonGroup from '../components/Inputs/ButtonGroup/ButtonGroup';
 import Link from '../components/Navigation/Link';
 import NavigationLink from '../components/Navigation/NavigationLink';
 import DarkModeSwitcher from '../components/Theme/DarkModeSwitcher';
+import Backdrop from '../components/Utils/Backdrop';
 import ClickAwayListener from '../components/Utils/ClickAwaiyListener';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+
+  const [open2, setOpen2] = useState(false);
+
   return (
     <div className={styles.container}>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
@@ -64,8 +75,9 @@ export default function Home() {
         <br />
         <br />
         <Link href="https://www.google.com" target="_blank" />
+
         <ClickAwayListener
-          onClickAway={() => setOpen(false)}
+          onClickAway={() => setOpen2(false)}
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -73,13 +85,17 @@ export default function Home() {
             justifyContent: 'center',
           }}
         >
-          <Button onClick={() => setOpen((prevState) => !prevState)}>
+          <Button onClick={() => setOpen2((prevState) => !prevState)}>
             Toggle
           </Button>
-          {open && <div>This is inside the clickAway</div>}
+          {open2 && <div>This is inside the clickAway</div>}
         </ClickAwayListener>
 
         <ButtonGroup />
+        <Button onClick={handleToggle}>Show backdrop</Button>
+        <Backdrop open={open} onClick={handleClose}>
+          This is the children of the backdrop
+        </Backdrop>
         <h1 className={styles.title}>
           Welcome to <a href="https://https://nextjs.org">Next.js!</a>
         </h1>

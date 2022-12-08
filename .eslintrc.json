@@ -5,6 +5,7 @@
     "no-anonymous-default-export": "off",
     "semi": "off",
     "no-console": "error",
-    "no-inline-comments": "error"
+    "no-inline-comments": "error",
+    "no-unused-vars": "error"
   }
 }

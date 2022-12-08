@@ -1,26 +1,27 @@
 import { useRef, useEffect } from 'react';
 
-const ClickAwayListener = ({ onClickAway, children, ...props }) => {
-  const rootRef = useRef();
-
+function useOutsideAlerter(ref, onClick) {
   useEffect(() => {
-    const handleClickAway = (event) => {
-      const eventTarget = event.target;
-
-      const isClickInside = rootRef?.current?.contains(eventTarget);
-
-      if (!isClickInside) onClickAway();
-    };
-
-    window.addEventListener('click', handleClickAway);
-
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        onClick();
+      }
+    }
+    // Bind the event listener
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      window.removeEventListener('click', handleClickAway);
+      // Unbind the event listener on clean up
+      document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [onClickAway, rootRef]);
+  }, [onClick, ref]);
+}
+
+const ClickAwayListener = ({ onClickAway, children, ...props }) => {
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef, onClickAway);
 
   return (
-    <div ref={rootRef} {...props}>
+    <div ref={wrapperRef} {...props}>
       {children}
     </div>
   );

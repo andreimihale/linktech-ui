@@ -8,10 +8,12 @@
 @import '../components/Navigation/Link/link.scss';
 @import '../components/Theme/DarkModeSwitcher/darkModeSwitcher.scss';
 @import '../components/Inputs/ButtonGroup/buttonGroup.scss';
+@import '../components/Utils/Backdrop/backdrop.scss';
 
 /*
   1. Use a more-intuitive box-sizing model.
 */
+
 *,
 *::before,
 *::after {
