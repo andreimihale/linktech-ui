@@ -8,6 +8,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      strokeWidth: {
+        3: '3',
+        4: '4',
+      },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
         wiggle: 'wiggle 1s ease-in-out infinite',

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Button from '../components/Inputs/Button';
 import ButtonGroup from '../components/Inputs/ButtonGroup/ButtonGroup';
+import Checkbox from '../components/Inputs/Checkbox';
 import Link from '../components/Navigation/Link';
 import NavigationLink from '../components/Navigation/NavigationLink';
 import DarkModeSwitcher from '../components/Theme/DarkModeSwitcher';
@@ -22,6 +23,11 @@ export default function Home() {
 
   const [open2, setOpen2] = useState(false);
 
+  const [open3, setOpen3] = useState(false);
+
+  const handleToggle3 = () => {
+    setOpen3((prevState) => !prevState);
+  };
   return (
     <div className={styles.container}>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
@@ -96,6 +102,13 @@ export default function Home() {
         <Backdrop open={open} onClick={handleClose}>
           This is the children of the backdrop
         </Backdrop>
+        <br />
+        <br />
+        <br />
+        <br />
+        <Checkbox checked={open3} onClick={handleToggle3}>
+          this is my first time
+        </Checkbox>
         <h1 className={styles.title}>
           Welcome to <a href="https://https://nextjs.org">Next.js!</a>
         </h1>

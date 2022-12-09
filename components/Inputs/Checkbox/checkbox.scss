@@ -1,0 +1,30 @@
+input:checked + div svg {
+}
+
+.checkbox {
+  @apply flex gap-1;
+
+  &.checkbox-row {
+    @apply flex-row items-center;
+  }
+
+  &.checkbox-column {
+    @apply flex-col;
+  }
+}
+
+.checkbox__input {
+  @apply bg-white border-2 rounded-md border-blue-600 w-8 h-8 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-300;
+
+  &.checkbox__input--checked {
+    @apply border-blue-500;
+  }
+}
+
+.checkbox__icon {
+  @apply fill-none hidden pl-0.5 w-5 h-5 stroke-blue-500 stroke-3 pointer-events-none;
+
+  &.checkbox__icon--checked {
+    @apply block;
+  }
+}

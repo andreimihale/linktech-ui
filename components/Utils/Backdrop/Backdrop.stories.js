@@ -8,7 +8,7 @@ export default {
   argTypes: {},
 };
 
-const Template = (args) => {
+const Template = () => {
   const [open, setOpen] = useState(true);
 
   const handleClose = () => {
@@ -21,7 +21,7 @@ const Template = (args) => {
   return (
     <>
       <Button onClick={handleToggle}>Show backdrop</Button>
-      <Backdrop open={open} onClick={handleClose} {...args}>
+      <Backdrop open={open} onClick={handleClose}>
         This is the children of the backdrop
       </Backdrop>
     </>
@@ -29,4 +29,3 @@ const Template = (args) => {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
