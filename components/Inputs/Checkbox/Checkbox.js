@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { CheckIcon } from '@heroicons/react/24/outline';
 
 const Checkbox = ({
   checked,
@@ -14,26 +13,20 @@ const Checkbox = ({
     [`checkbox-${allignment}`]: allignment,
   });
 
-  const checkboxInput = classNames('checkbox__input', {
-    'checkbox__input--checked': checked,
-  });
+  const checkboxInput = classNames('checkbox__input');
 
-  const checkboxIcon = classNames('checkbox__icon', {
-    'checkbox__icon--checked': checked,
-  });
+  const checkboxIcon = classNames('checkbox__icon');
   return (
     <div className={checkboxContainer} {...props}>
       <input
         type="checkbox"
         name={name}
         value={checked}
-        className="opacity-0 absolute h-8 w-8"
         onClick={onClick}
+        className={checkboxInput}
       />
-      <div className={checkboxInput}>
-        <CheckIcon className={checkboxIcon} />
-      </div>
-      <label>{children}</label>
+
+      <label className={checkboxIcon}>{children}</label>
     </div>
   );
 };

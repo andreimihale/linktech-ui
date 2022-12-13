@@ -12,6 +12,7 @@ const Template = () => {
   const handleToggle = () => {
     setChecked((prevState) => !prevState);
   };
+
   return <Checkbox checked={checked} onClick={handleToggle} />;
 };
 export const Default = Template.bind({});

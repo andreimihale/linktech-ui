@@ -1,5 +1,5 @@
 .modal {
-  @apply flex justify-center items-center fixed top-0 h-screen w-screen backdrop-brightness-50 dark:backdrop-brightness-50;
+  @apply fixed top-0 flex h-screen w-screen items-center justify-center backdrop-brightness-50 dark:backdrop-brightness-50;
 
   &.modal-row {
     @apply flex-row;
