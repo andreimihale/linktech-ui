@@ -16,11 +16,11 @@
     }
   }
 
-  &-icon-start {
+  .btn-icon-start {
     @apply h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6;
   }
 
-  &-icon-end {
+  .btn-icon-end {
     @apply h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6;
   }
 
@@ -58,10 +58,10 @@
     }
 
     &.btn-warning {
-      @apply bg-yellow-400 text-slate-700;
+      @apply bg-orange-500 text-slate-100;
 
       &:hover {
-        @apply bg-yellow-700;
+        @apply bg-orange-700;
       }
     }
 
@@ -117,10 +117,10 @@
     }
 
     &.btn-warning {
-      @apply border-yellow-400 text-yellow-400;
+      @apply border-orange-500 text-orange-500;
 
       &:hover {
-        @apply border-yellow-300 bg-yellow-100 bg-opacity-30 text-yellow-300;
+        @apply border-orange-300 bg-orange-100 bg-opacity-30 text-orange-300;
       }
     }
 
@@ -174,10 +174,10 @@
     }
 
     &.btn-warning {
-      @apply text-yellow-400;
+      @apply text-orange-500;
 
       &:hover {
-        @apply bg-yellow-100 bg-opacity-30;
+        @apply bg-orange-100 bg-opacity-30;
       }
     }
 
@@ -198,14 +198,14 @@
   }
 
   &.btn-small {
-    @apply py-1.5 px-2 md:py-1.5 md:px-3 lg:py-2 lg:px-6;
+    @apply py-1.5 px-1.5 text-sm md:py-2 md:px-2 md:text-base lg:py-2.5 lg:px-2.5 lg:text-lg;
   }
 
   &.btn-medium {
-    @apply py-2 px-3 md:py-2 md:px-3 lg:py-3 lg:px-6;
+    @apply py-2 px-2 text-base md:py-2.5 md:px-2.5 md:text-lg lg:py-3 lg:px-3 lg:text-xl;
   }
 
   &.btn-large {
-    @apply py-2 px-4 md:py-3 md:px-6 lg:py-3.5 lg:px-9;
+    @apply py-3 px-3 text-lg md:py-4 md:px-4 md:text-xl lg:py-4 lg:px-4;
   }
 }

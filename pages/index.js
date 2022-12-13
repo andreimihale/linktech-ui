@@ -1,10 +1,11 @@
 /* eslint-disable no-console */
-import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, ListBulletIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import { useState } from 'react';
 import Button from '../components/Inputs/Button';
 import ButtonGroup from '../components/Inputs/ButtonGroup/ButtonGroup';
 import Checkbox from '../components/Inputs/Checkbox';
+import Fab from '../components/Inputs/Fab';
 import Radio from '../components/Inputs/Radio';
 import Link from '../components/Navigation/Link';
 import NavigationLink from '../components/Navigation/NavigationLink';
@@ -51,6 +52,8 @@ export default function Home() {
         />
         <br />
         <Button endIcon={<ArrowLeftIcon />} />
+        <br />
+        <Button variant="contained" color="warning" />
         <br />
         <Button variant="outlined" />
         <br />
@@ -174,6 +177,17 @@ export default function Home() {
             <div>helper text</div>
           </Radio>
         </div>
+
+        <br />
+        <br />
+        <br />
+
+        <br />
+        <Fab size="large" color="danger" icon={<ListBulletIcon />}>
+          Fab content
+        </Fab>
+
+        <br />
         <h1 className={styles.title}>
           Welcome to <a href="https://https://nextjs.org">Next.js!</a>
         </h1>

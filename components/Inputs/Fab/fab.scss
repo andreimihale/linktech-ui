@@ -1,0 +1,96 @@
+.fab {
+  @apply fixed bottom-10 right-8 z-50 flex flex-row flex-nowrap items-center justify-between gap-x-2 overflow-hidden rounded-full font-bold text-white drop-shadow-lg transition-all duration-500 ease-in-out hover:drop-shadow-2xl;
+
+  .fab-ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: fab-ripple 1000ms linear;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 900;
+  }
+  @keyframes fab-ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+
+  &.fab-primary {
+    @apply bg-blue-600;
+
+    &:hover {
+      @apply bg-blue-800;
+    }
+  }
+
+  &.fab-secondary {
+    @apply bg-orange-500;
+
+    &:hover {
+      @apply bg-orange-700;
+    }
+  }
+
+  &.fab-success {
+    @apply bg-green-600;
+
+    &:hover {
+      @apply bg-green-800;
+    }
+  }
+
+  &.fab-info {
+    @apply bg-blue-500;
+
+    &:hover {
+      @apply bg-blue-700;
+    }
+  }
+
+  &.fab-warning {
+    @apply bg-orange-400;
+
+    &:hover {
+      @apply bg-orange-700;
+    }
+  }
+
+  &.fab-danger {
+    @apply bg-red-600;
+
+    &:hover {
+      @apply bg-red-800;
+    }
+  }
+
+  &.fab-disabled {
+    @apply cursor-not-allowed bg-gray-300 text-gray-500;
+    &:hover {
+      @apply bg-gray-300 text-gray-500;
+    }
+  }
+
+  &.fab-small {
+    @apply py-1.5 px-1.5 text-sm md:py-2 md:px-2 md:text-base lg:py-2.5 lg:px-2.5 lg:text-lg;
+
+    .fab-icon {
+      @apply h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6;
+    }
+  }
+
+  &.fab-medium {
+    @apply py-2 px-2 text-base md:py-2.5 md:px-2.5 md:text-lg lg:py-3 lg:px-3 lg:text-xl;
+    .fab-icon {
+      @apply h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7;
+    }
+  }
+
+  &.fab-large {
+    @apply py-3 px-3 text-lg md:py-4 md:px-4 md:text-xl lg:py-5 lg:px-5;
+    .fab-icon {
+      @apply h-6 w-6 md:h-7 md:w-7;
+    }
+  }
+}

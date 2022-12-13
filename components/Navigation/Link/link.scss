@@ -81,16 +81,16 @@
   }
 
   &.link-warning {
-    @apply text-yellow-400;
+    @apply text-orange-400;
 
     &:hover {
-      @apply text-yellow-300;
+      @apply text-orange-300;
     }
     &.link-underline {
-      @apply border-b-2 border-yellow-400;
+      @apply border-b-2 border-orange-400;
 
       &:hover {
-        @apply border-b-2 border-yellow-300;
+        @apply border-b-2 border-orange-300;
       }
     }
   }
