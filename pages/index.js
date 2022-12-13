@@ -1,9 +1,11 @@
+/* eslint-disable no-console */
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import { useState } from 'react';
 import Button from '../components/Inputs/Button';
 import ButtonGroup from '../components/Inputs/ButtonGroup/ButtonGroup';
 import Checkbox from '../components/Inputs/Checkbox';
+import Radio from '../components/Inputs/Radio';
 import Link from '../components/Navigation/Link';
 import NavigationLink from '../components/Navigation/NavigationLink';
 import DarkModeSwitcher from '../components/Theme/DarkModeSwitcher';
@@ -28,6 +30,14 @@ export default function Home() {
   const handleToggle3 = () => {
     setOpen3((prevState) => !prevState);
   };
+
+  const handleRowChange = (e) => {
+    console.log(e.target.value);
+  };
+
+  const handleColumnChange = (e) => {
+    console.log(e.target.value);
+  };
   return (
     <div className={styles.container}>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
@@ -51,7 +61,6 @@ export default function Home() {
         <Button disabled={true} variant="outlined" />
         <br />
         <Button disabled={true} variant="text" />
-
         <Button size="small" />
         <br />
         <Button size="medium" variant="outlined" />
@@ -66,11 +75,9 @@ export default function Home() {
         <Button size="small" variant="outlined" />
         <br />
         <Button size="small" variant="text" />
-
         <br />
         <br />
         <br />
-
         <NavigationLink startIcon={<ArrowLeftIcon />} href="/">
           Test link
         </NavigationLink>
@@ -81,7 +88,6 @@ export default function Home() {
         <br />
         <br />
         <Link href="https://www.google.com" target="_blank" />
-
         <ClickAwayListener
           onClickAway={() => setOpen2(false)}
           style={{
@@ -96,7 +102,6 @@ export default function Home() {
           </Button>
           {open2 && <div>This is inside the clickAway</div>}
         </ClickAwayListener>
-
         <ButtonGroup />
         <Button onClick={handleToggle}>Show backdrop</Button>
         <Backdrop open={open} onClick={handleClose}>
@@ -109,6 +114,66 @@ export default function Home() {
         <Checkbox checked={open3} onClick={handleToggle3}>
           this is my first time
         </Checkbox>
+        <br />
+        <br />
+        <br />
+        <div onChange={handleRowChange}>
+          <Radio value="row" name="row" alignItems="row">
+            <div>Row</div>
+            <div>helper text</div>
+          </Radio>
+          <br />
+          <Radio value="row-start" name="row" alignItems="row-start">
+            <div>Row Start</div>
+            <div>helper text</div>
+          </Radio>
+          <br />
+          <Radio value="row-reverse" name="row" alignItems="row-reverse">
+            <div>Row Reverse</div>
+            <div>helper text</div>
+          </Radio>
+          <br />
+          <Radio
+            value="row-reverse-start"
+            name="row"
+            alignItems="row-reverse-start"
+          >
+            <div>Row reverse Start</div>
+            <div>helper text</div>
+          </Radio>
+          <br />
+        </div>
+        <div onChange={handleColumnChange}>
+          <Radio value="column" name="column" alignItems="column">
+            <div>Column</div>
+            <div>helper text</div>
+          </Radio>
+          <br />
+
+          <Radio value="column-start" name="column" alignItems="column-start">
+            <div>Column Start</div>
+            <div>helper text</div>
+          </Radio>
+          <br />
+
+          <Radio
+            value="column-reverse"
+            name="column"
+            alignItems="column-reverse"
+          >
+            <div>Column Reverse</div>
+            <div>helper text</div>
+          </Radio>
+          <br />
+          <Radio
+            value="column-reverse-start"
+            name="column"
+            alignItems="column-reverse-start"
+          >
+            <div>Column Reverse Start</div>
+            <div>helper text</div>
+          </Radio>
+        </div>
         <h1 className={styles.title}>
           Welcome to <a href="https://https://nextjs.org">Next.js!</a>
         </h1>
