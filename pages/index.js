@@ -12,6 +12,7 @@ import NavigationLink from '../components/Navigation/NavigationLink';
 import DarkModeSwitcher from '../components/Theme/DarkModeSwitcher';
 import Backdrop from '../components/Utils/Backdrop';
 import ClickAwayListener from '../components/Utils/ClickAwayListener';
+import Popover from '../components/Utils/Popover';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -188,6 +189,16 @@ export default function Home() {
         </Fab>
 
         <br />
+
+        <Popover
+          title="popover title"
+          switcherText="switcher text"
+          isHover={false}
+          isButton={false}
+        >
+          content
+        </Popover>
+
         <h1 className={styles.title}>
           Welcome to <a href="https://https://nextjs.org">Next.js!</a>
         </h1>
